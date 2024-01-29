@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<div>
+    <h5 class="text-danger yuji-syuku pt-3">
+      ソフトウェア開発みくじ
+    </h5>
+  </div>
+  <div>
+    <hr class="line-red" />
+    <img class="illust" src="${omikujiData["url"]}" />
+    <hr class="line-red" />
+  </div>
+  <div>
+    <h1 class="text-danger yuji-syuku text-center p-3">
+      ${omikujiData["結果"]}
+    </h1>
+  </div>
+  <div>
+  <p class="text-danger yuji-syuku p-3">
+  ${omikujiData["詳細"]}
+  </p>
+  </div>
+  <div class="mb-3">
+    <hr class="line-red" />
+    <p class="text-danger yuji-syuku text-center">✿ 職業 ✿</p>
+    <h5 class="text-danger yuji-syuku text-center">${omikujiData["職業"]}</h5>
+    <hr class="line-red" />
+    <p class="text-danger yuji-syuku text-center">
+      ✿ ラッキーアイテム ✿
+    </p>
+    <h5 class="text-danger yuji-syuku text-center">${omikujiData["アイテム"]}</h5>
+  </div>
+  <div class="mb-3">
+    <button
+      id="re-draw-omikuji"
+      type="button"
+      class="btn btn-danger rounded-pill yuji-syuku"
+    >
+      もう一度おみくじを引く
+    </button>
+  </div>
+
+
+      
+</body>
+</html>
