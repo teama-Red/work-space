@@ -38,7 +38,7 @@ h1 {
 
 /* Flexbox settings for vertical centering */
 .Omikuji{
-    width:0.5rem;
+    width:0.3rem;
 }
 .Omikuji-img{
   display: inline-block;  
@@ -103,4 +103,11 @@ button {
         margin: 5px;
         padding: 3px;
     }
+}
+
+.d-block{
+    display: block;
+}
+.d-none{
+    display: none;
 }
