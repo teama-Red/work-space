@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
+    <link href="reset.css" rel="stylesheet" />
     <title>おみくじ</title>
 </head>
-
 <body>
     <div id="home" class="d-block">
         <div class="d-flex vh-100 justify-content-center yuji-syuku flex-column align-items-center">
-            <h1 class="text-danger">あなたの来世</h1>
-            <h1 class="text-danger">みくじ</h1>
+            <h1 class="text-danger">あなたの来世みくじ</h1>      
             <img src="https://acha0203.github.io/SW_Dev_Omikuji/images/syougatsu2_omijikuji2.png" alt="" class="src">
             <button id="draw-omikuji" type="button" onclick="seeResult(); event.preventDefault()"
                 class="btn btn-danger rounded-pill yuji-syuku my-3"> おみくじを引く</button>
@@ -27,7 +27,7 @@
         </div>
     </div>
     <div id="result" class="d-none"></div>
-    </div>
+
     <script type="text/javascript" src="result.js"></script>
 </body>
 
