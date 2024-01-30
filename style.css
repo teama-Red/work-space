@@ -16,7 +16,7 @@ body {
 }
 /* Centering and spacing for the main container */
 #home {
-    display: block;
+    /* display: block; */
     text-align: center;
     padding: 20px;
 }
