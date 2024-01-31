@@ -8,7 +8,7 @@
 /* Basic font settings */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f8f8; /* Light background color */
+    background-color: #c0c0c0; /* Light background color */
     color: #333;
     height: auto; 
     width: 100%;
@@ -24,28 +24,29 @@ body {
 /* Styling for headers */
 h1 {
     font-size: 2em;
-    margin-bottom: 0.5em;
+    margin: 0.5em;
+    padding: 1em;
     color: #c82333;
-}
-.omikuji-h1{
-    margin-top: 2Vh;
+    text-align: center;
 }
 
 /* Text color for danger elements */
 .text-danger {
     color: #dc3545; /* Bootstrap's danger color */
 }
-
+.text-danger yuji-syuku pt-3{
+    margin: auto;
+}
 /* Flexbox settings for vertical centering */
 .Omikuji{
-    width:0.3rem;
+    width:100%;
 }
 .Omikuji-img{
-  display: inline-block;  
-  width: 10rem;
+ display: block;
+ margin: 100px auto;
+ width:6em;
 
 }
-
 .vh-100 {
     min-height: 100vh;
 }
@@ -61,7 +62,9 @@ h1 {
 
 /* Button styles */
 button {
-    padding: 10px 20px;
+    display: block;
+    margin-top: 200px;
+    padding: 50px 20px;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -72,18 +75,24 @@ button {
 }
 
 /* Specific styles for the draw-omikuji button */
-#draw-omikuji {
+#draw-omikuji{
     background-color: #dc3545;
     color: white;
     border-radius: 50px;
     padding: 10px;
+    width:200px
 }
 
 #draw-omikuji:hover {
-    background-color: #c82333; /* Darken color on hover */
+    background-color: white;;
+    color:  #dc3545; 
+    font-weight: bold;
+    padding: 10px;
+    width:200px;
+    border:solid 1px #dc3545; 
 }
 
-/* Footer and link styles */
+
 #remarks a, #copyright {
     text-decoration: none;
     color: #dc3545;
@@ -104,10 +113,77 @@ button {
         padding: 3px;
     }
 }
+#re-draw-omikuji {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
 
 .d-block{
     display: block;
 }
 .d-none{
     display: none;
+}
+/* result.html style */
+.bg-white{
+    width: 22vw;
+    margin: 0 auto;
+    height: auto;
+    background-color: #fff;
+    padding: 20px;
+}
+.line-red{
+    border: #c82333 solid 3px;
+    width: 20vw;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: #f8f8f8;
+    z-index: 3;
+}
+.wrap-red-line{
+    border: #c82333 double 5px;
+    width: 20vw;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom:100px ;
+    z-index: 3;
+}
+.wrap-red-line p{
+   font-size: 2.8px;
+}
+#re-draw-omikuji{
+    background-color: #dc3545;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    margin: 150px auto;
+    font-weight: 800;
+
+   border:solid 1px #fff; 
+}
+#re-draw-omikuji:hover{
+    background-color: white;;
+    color:  #dc3545; 
+    font-weight: bold;
+    border: #dc3545 solid 1px;
+}
+/* developer.html style */
+#backbtn{
+    background-color: #dc3545;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100px;
+    margin: 150px auto;
+    font-size: 1.3rem;
+}
+#backbtn:hover{
+    background-color: white;;
+    color:  #dc3545; 
+    font-weight: bold;
+    border: #dc3545 solid 1px;
 }
