@@ -57,41 +57,47 @@ function createResult(randomResult){
     const resultHtml = document.createElement('div');
 
     resultHtml.innerHTML = `
-        <div>
-            <h5 class="text-danger yuji-syuku pt-3">
-            あなたの来世みくじ
-            </h5>
-        </div>
-        <div>
-            <h1 class="text-danger yuji-syuku text-center p-3">
-            ${randomResult["職業"]}
-            </h1>
-        </div>
-        <div>
-            <p class="text-danger yuji-syuku p-3">
-            ${randomResult["説明"]}
-            </p>
-        </div>
-        <div class="mb-3">
-            <hr class="line-red" />
-            <p class="text-danger yuji-syuku text-center">✿ スキル ✿</p>
-            <h5 class="text-danger yuji-syuku text-center">${randomResult["スキル"]}</h5>
-            <hr class="line-red" />
-            <p class="text-danger yuji-syuku text-center">
-            ✿ ラッキーアイテム ✿
-            </p>
-            <h5 class="text-danger yuji-syuku text-center">${randomResult["アイテム1"]}</h5>
-            <h5 class="text-danger yuji-syuku text-center">${randomResult["アイテム2"]}</h5>
-        </div>
-        <div class="mb-3">
-            <button
-            id="re-draw-omikuji"
-            type="button"
-            class="btn btn-danger rounded-pill yuji-syuku"
-            >
-            もう一度おみくじを引く
-            </button>
-        </div>
+    <div>
+        <h1 class="text-danger yuji-syuku pt-3">
+        あなたの来世みくじ
+        </h1>
+    </div>
+    <div class="bg-white">
+    <div class="wrap-red-line">
+        <hr class="line-red" />
+        <img class="illust" src="${randomResult["url"]}" />
+        <hr class="line-red" />
+        <h1 class="text-danger yuji-syuku text-center p-3">
+        ${randomResult["職業"]}
+        </h1>
+    
+    <div>
+    <p class="text-danger yuji-syuku p-3">
+    ${randomResult["説明"]}
+    </p>
+    </div>
+    <div class="mb-3">
+        <hr class="line-red" />
+        <p class="text-danger yuji-syuku text-center">✿ スキル ✿</p>
+        <h5 class="text-danger yuji-syuku text-center">${randomResult["スキル"]}</h5>
+        <hr class="line-red" />
+        <p class="text-danger yuji-syuku text-center">
+        ✿ ラッキーアイテム ✿
+        </p>
+        <h5 class="text-danger yuji-syuku text-center">${randomResult["アイテム1"]}</h5>
+        <h5 class="text-danger yuji-syuku text-center">${randomResult["アイテム2"]}</h5>
+    </div>
+    </div>
+    </div>
+    <div class="mb-3">
+        <button
+        id="re-draw-omikuji"
+        type="button"
+        class="btn btn-danger rounded-pill yuji-syuku"
+        >
+        もう一度おみくじを引く
+        </button>
+    </div>
     `;
 
     return resultHtml
