@@ -2,9 +2,6 @@
 
 // HTMLのonclickで呼び出す関数
 function seeResult(){
-    // テスト用
-    // alert("hello");
-    // document.getElementById('result').innerHTML = '<h1>Test<h1>'
     revealResult();
     let randomResult = createRandom();
     let result = createResult(randomResult);
@@ -13,14 +10,13 @@ function seeResult(){
 
 // 表示非表示の切り替えを行う関数
 function revealResult() {
-    // テスト用
-    // alert("hello");
     document.getElementById('home').classList.remove('d-block');
     document.getElementById('home').classList.add('d-none');
     document.getElementById('result').classList.remove('d-none');
     document.getElementById('result').classList.add('d-block');
 }
 
+// おみくじの結果を格納した変数
 const data = {
     'results': [
         ['皿洗い', 'あなたはミシュラン3つ星の店の皿洗いです。あなたは皿を洗っているだけですが友達や親戚からは「そんなところで働けるなんてすごい！！」と羨望の眼差しを向けられます。'],
@@ -39,18 +35,67 @@ const data = {
     'item-group2': ['ダンボール', 'グラサン', '剣', '洗剤', 'PC', 'マント']
 }
 
+// ランダムな結果を選び、辞書型で返す関数
 function createRandom(){
     const jobIndex = Math.floor(Math.random() * 11);
     const jobName = data['results'][jobIndex][0];
     const jobDescription = data['results'][jobIndex][1];
-    return {'職業':jobName, '説明':jobDescription}
+
+    const skillIndex = Math.floor(Math.random() * 10);
+    const item1Index = Math.floor(Math.random() * 7);
+    const item2Index = Math.floor(Math.random() * 7);
+
+    const skill = data['skills'][skillIndex];
+    const item1 = data['item-group1'][item1Index];
+    const item2 = data['item-group2'][item2Index];
+
+    return {'職業':jobName, '説明':jobDescription, 'スキル':skill, 'アイテム1':item1, 'アイテム2':item2}
 }
 
+// 受け取った結果をHTMLに代入し、結果表示用のHTMLを返す関数
 function createResult(randomResult){
     const resultHtml = document.createElement('div');
+    // resultHtml.innerHTML = `
+    // <h1>${randomResult['職業']}</h1>
+    // <p>${randomResult['説明']}</p>
+    // `;
     resultHtml.innerHTML = `
-    <h1>${randomResult['職業']}</h1>
-    <p>${randomResult['説明']}</p>
+        <div>
+            <h5 class="text-danger yuji-syuku pt-3">
+            あなたの来世みくじ
+            </h5>
+        </div>
+        <div>
+            <h1 class="text-danger yuji-syuku text-center p-3">
+            ${randomResult["職業"]}
+            </h1>
+        </div>
+        <div>
+            <p class="text-danger yuji-syuku p-3">
+            ${randomResult["説明"]}
+            </p>
+        </div>
+        <div class="mb-3">
+            <hr class="line-red" />
+            <p class="text-danger yuji-syuku text-center">✿ スキル ✿</p>
+            <h5 class="text-danger yuji-syuku text-center">${randomResult["スキル"]}</h5>
+            <hr class="line-red" />
+            <p class="text-danger yuji-syuku text-center">
+            ✿ ラッキーアイテム ✿
+            </p>
+            <h5 class="text-danger yuji-syuku text-center">${randomResult["アイテム1"]}</h5>
+            <h5 class="text-danger yuji-syuku text-center">${randomResult["アイテム2"]}</h5>
+        </div>
+        <div class="mb-3">
+            <button
+            id="re-draw-omikuji"
+            type="button"
+            class="btn btn-danger rounded-pill yuji-syuku"
+            >
+            もう一度おみくじを引く
+            </button>
+        </div>
     `;
+
     return resultHtml
 }
