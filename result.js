@@ -16,6 +16,15 @@ function revealResult() {
     document.getElementById('result').classList.add('d-block');
 }
 
+// 「もう一度おみくじを引く」ボタンに適用する関数
+function retry() {
+    document.getElementById('result').classList.remove('d-block');
+    document.getElementById('result').classList.add('d-none');
+    document.getElementById('home').classList.remove('d-none');
+    document.getElementById('home').classList.add('d-block');
+    document.getElementById('result').innerHTML = '';
+}
+
 // おみくじの結果を格納した変数
 const data = {
     'results': [
@@ -100,6 +109,12 @@ function createResult(randomResult){
         </button>
     </div>
     `;
+
+    // 「もう一度おみくじを引く」ボタンをクリックした際に反応する関数を設定
+    resultHtml.querySelectorAll('#re-draw-omikuji');
+    resultHtml.addEventListener('click', function(){
+        retry();
+    });
 
     return resultHtml
 }
