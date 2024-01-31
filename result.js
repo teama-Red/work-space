@@ -37,13 +37,13 @@ const data = {
 
 // ランダムな結果を選び、辞書型で返す関数
 function createRandom(){
-    const jobIndex = Math.floor(Math.random() * 11);
+    const jobIndex = Math.floor(Math.random() * 10);
     const jobName = data['results'][jobIndex][0];
     const jobDescription = data['results'][jobIndex][1];
 
-    const skillIndex = Math.floor(Math.random() * 10);
-    const item1Index = Math.floor(Math.random() * 7);
-    const item2Index = Math.floor(Math.random() * 7);
+    const skillIndex = Math.floor(Math.random() * 9);
+    const item1Index = Math.floor(Math.random() * 6);
+    const item2Index = Math.floor(Math.random() * 6);
 
     const skill = data['skills'][skillIndex];
     const item1 = data['item-group1'][item1Index];
@@ -55,10 +55,7 @@ function createRandom(){
 // 受け取った結果をHTMLに代入し、結果表示用のHTMLを返す関数
 function createResult(randomResult){
     const resultHtml = document.createElement('div');
-    // resultHtml.innerHTML = `
-    // <h1>${randomResult['職業']}</h1>
-    // <p>${randomResult['説明']}</p>
-    // `;
+
     resultHtml.innerHTML = `
         <div>
             <h5 class="text-danger yuji-syuku pt-3">
