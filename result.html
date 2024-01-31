@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="reset.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
     <title>Document</title>
 </head>
 
 <body>
 
 <div>
-    <h5 class="text-danger yuji-syuku pt-3">
+    <h1 class="text-danger yuji-syuku pt-3">
       あなたの来世みくじ
-    </h5>
+    </h1>
   </div>
-  <div>
+<div class="bg-white">
+  <div class="wrap-red-line">
     <hr class="line-red" />
     <img class="illust" src="${omikujiData["url"]}" />
     <hr class="line-red" />
-  </div>
-  <div>
     <h1 class="text-danger yuji-syuku text-center p-3">
       ${omikujiData["結果"]}
     </h1>
-  </div>
+  
   <div>
   <p class="text-danger yuji-syuku p-3">
   ${omikujiData["詳細"]}
@@ -30,14 +31,17 @@
   </div>
   <div class="mb-3">
     <hr class="line-red" />
-    <p class="text-danger yuji-syuku text-center">✿ 職業 ✿</p>
-    <h5 class="text-danger yuji-syuku text-center">${omikujiData["職業"]}</h5>
+    <p class="text-danger yuji-syuku text-center">✿ スキル ✿</p>
+    <h5 class="text-danger yuji-syuku text-center">${omikujiData["スキル"]}</h5>
     <hr class="line-red" />
     <p class="text-danger yuji-syuku text-center">
       ✿ ラッキーアイテム ✿
     </p>
-    <h5 class="text-danger yuji-syuku text-center">${omikujiData["アイテム"]}</h5>
+    <h5 class="text-danger yuji-syuku text-center">${omikujiData["アイテム1"]}</h5>
+    <h5 class="text-danger yuji-syuku text-center">${omikujiData["アイテム2"]}</h5>
   </div>
+</div>
+</div>
   <div class="mb-3">
     <button
       id="re-draw-omikuji"
@@ -49,6 +53,6 @@
   </div>
 
 
-      
+
 </body>
 </html>
