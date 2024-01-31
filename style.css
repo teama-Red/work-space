@@ -24,8 +24,8 @@ body {
 /* Styling for headers */
 h1 {
     font-size: 2em;
-    margin: 0.5em;
-    padding: 1em;
+    margin: 0.1em;
+    padding: 0.1em;
     color: #c82333;
     text-align: center;
 }
@@ -33,6 +33,7 @@ h1 {
 /* Text color for danger elements */
 .text-danger {
     color: #dc3545; /* Bootstrap's danger color */
+    font-size:1.8rem;
 }
 .text-danger yuji-syuku pt-3{
     margin: auto;
@@ -53,12 +54,16 @@ h1 {
 
 /* Margin and padding for elements with 'yuji-syuku' class */
 .yuji-syuku {
-    margin: 100px;
+    margin:20px 10px;
     padding: 5px;
 }
 
-/* Styling for the omikuji image */
-
+.cursur {
+    cursor: auto;
+}
+.cursur:hover{
+    cursor: pointer;
+}
 
 /* Button styles */
 button {
@@ -113,11 +118,7 @@ button {
         padding: 3px;
     }
 }
-#re-draw-omikuji {
-    color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545;
-}
+
 
 .d-block{
     display: block;
@@ -126,6 +127,9 @@ button {
     display: none;
 }
 /* result.html style */
+.detail-font,.skill-font,.item-font{
+    font-size: 20px;
+}
 .bg-white{
     width: 22vw;
     margin: 0 auto;
@@ -135,7 +139,7 @@ button {
 }
 .line-red{
     border: #c82333 solid 3px;
-    width: 20vw;
+    width: 17vw;
     margin: 0 auto;
     justify-content: center;
     background-color: #f8f8f8;
@@ -143,28 +147,30 @@ button {
 }
 .wrap-red-line{
     border: #c82333 double 5px;
-    width: 20vw;
+    width: 18vw;
     height: auto;
     margin: 0 auto;
     padding-bottom:100px ;
     z-index: 3;
 }
 .wrap-red-line p{
-   font-size: 2.8px;
+   font-size: 18px;
 }
+
 #re-draw-omikuji{
+    position: absolute;
     background-color: #dc3545;
     color: white;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    margin: 0 auto;
+    border-radius: 50px;
+    padding: 10px;
+    left:40%;
+    right: 40%;
+    margin: 20px auto 100px;
     font-size: 1.3rem;
-    margin: 150px auto;
-    font-weight: 800;
-
    border:solid 1px #fff; 
 }
+
+
 #re-draw-omikuji:hover{
     background-color: white;;
     color:  #dc3545; 
@@ -178,12 +184,28 @@ button {
     border-radius: 5px;
     padding: 10px;
     width: 100px;
+    white-space: nowrap;
     margin: 150px auto;
     font-size: 1.3rem;
+    
 }
 #backbtn:hover{
     background-color: white;;
     color:  #dc3545; 
     font-weight: bold;
     border: #dc3545 solid 1px;
+}
+/* aboutomikuji.html style */
+#about{
+    width:80%
+}
+.Recursion-font{
+    font-style: oblique;
+    color:#0066FF;
+    font-weight: bold;
+}
+/* footer style */
+footer p {
+    margin-top: 200px;
+    font-size:0.8rem;
 }

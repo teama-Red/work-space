@@ -20,25 +20,25 @@
     <hr class="line-red" />
     <img class="illust" src="${omikujiData["url"]}" />
     <hr class="line-red" />
-    <h1 class="text-danger yuji-syuku text-center p-3">
+    <h1 class="text-danger yuji-syuku text-center p-3 detail-font">
       ${omikujiData["結果"]}
     </h1>
   
   <div>
-  <p class="text-danger yuji-syuku p-3">
+  <p class="text-danger yuji-syuku p-3 detail-font">
   ${omikujiData["詳細"]}
   </p>
   </div>
   <div class="mb-3">
     <hr class="line-red" />
-    <p class="text-danger yuji-syuku text-center">✿ スキル ✿</p>
-    <h5 class="text-danger yuji-syuku text-center">${omikujiData["スキル"]}</h5>
+    <p class="text-danger yuji-syuku text-center skill-font">✿ スキル ✿</p>
+    <p class="text-danger yuji-syuku text-center skill-font">${omikujiData["スキル"]}</p>
     <hr class="line-red" />
-    <p class="text-danger yuji-syuku text-center">
+    <p class="text-danger yuji-syuku text-center item-font">
       ✿ ラッキーアイテム ✿
     </p>
-    <h5 class="text-danger yuji-syuku text-center">${omikujiData["アイテム1"]}</h5>
-    <h5 class="text-danger yuji-syuku text-center">${omikujiData["アイテム2"]}</h5>
+    <p class="text-danger yuji-syuku text-center item-font">${omikujiData["アイテム1"]}</p>
+    <p class="text-danger yuji-syuku text-center item-font">${omikujiData["アイテム2"]}</p>
   </div>
 </div>
 </div>
@@ -51,8 +51,8 @@
       もう一度おみくじを引く
     </button>
   </div>
-
-
-
+ <footer>
+    <div id="copyright" class="yuji-syuku text-danger"><p>©あなたの来世みくじ</p></div>
+    </footer>
 </body>
 </html>

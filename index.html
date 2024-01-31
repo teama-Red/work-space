@@ -9,25 +9,26 @@
 </head>
 <body>
     <div id="home" class="d-block">
-        <div class="d-flex vh-100 justify-content-center yuji-syuku flex-column align-items-center">
+        <div class="d-flex vh-100 justify-content-center flex-column align-items-center">
             <h1 class="text-danger">あなたの来世みくじ</h1>      
           <div class="Omikuji">  <img src="https://acha0203.github.io/SW_Dev_Omikuji/images/syougatsu2_omijikuji2.png" alt="" class="Omikuji-img"></div>
             <button id="draw-omikuji" type="button" onclick="seeResult(); event.preventDefault()"
                 class="btn btn-danger rounded-pill yuji-syuku my-3"> おみくじを引く</button>
-            <div id="remarks" class="d-flex justify-content-center">
-                <a href="aboutomikuzi.html">
+      <footer>
+                <div id="remarks" class="d-flex justify-content-center">
+                <a href="aboutomikuzi.html" class="cursur" >
                     <p class="p-1 text-danger yuji-syuku">このおみくじについて</p>
                 </a>
-                <a href="developer.html">
+                <a href="developer.html" class="cursur" >
                     <p class="p-1 text-danger">開発者一覧</p>
                 </a>
             </div>
-            <div id="copyright" class="text-danger yuji-syuku">©あなたの来世みくじ</div>
+            <div id="copyright" class="text-danger "><p>©あなたの来世みくじ</p></div>
         </div>
     </div>
     <div id="result" class="d-none"></div>
-
     <script type="text/javascript" src="result.js"></script>
+</footer>
 </body>
 
 </html>
