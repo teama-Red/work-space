@@ -37,6 +37,7 @@ h1 {
 .text-danger {
     color: #dc3545; /* Bootstrap's danger color */
     font-size:1.8rem;
+    text-align: center;
 }
 .text-danger yuji-syuku pt-3{
     margin: auto;
@@ -111,19 +112,37 @@ button {
 }
 
 /* Media query for responsive design */
-@media (max-width: 768px) {
+@media (max-width: 768px){
     h1 {
         font-size: 1.5em;
+        text-align: center;
     }
 
     .yuji-syuku {
         margin: 5px;
         padding: 3px;
     }
+    .mb-3 #re-draw-omikuji{
+        position:relative;
+        width:100%;
+    }
+    #re-draw-omikuji{
+        width:auto;
+        margin: 0 auto;
+    }
+    #re-draw-omikuji p{
+        font-size: 10px;
+    }
+
+    #re-draw-omikuji p:hover{
     
+    font-size: 10px;
+    }
 }
 
-
+.mb-3{
+ width: 100%;
+}
 .d-block{
     display: block;
 }
@@ -131,20 +150,20 @@ button {
     display: none;
 }
 /* result.html style */
-.detail-font,.skill-font,.item-font{
-    font-size: 20px;
+.skill-font,.item-font{
+  position: absolute;
 }
 .illust-frame{
-    width: 22vw;
-    height: auto;
+     
+    height: 300px;
     min-height:300px ;
     display: block;
     padding-top:100px;
 }
 .illust{
-    width:180px;
-    padding:10% 0 2% 15%;
-    margin: 0px auto;
+    width:250px;
+    
+    margin: 50px auto 100px 50px;
 
 }
 .detail-font{
@@ -156,8 +175,10 @@ button {
     padding-top: 100px;
     display: inline-block;
 }
+
+
 .bg-white{
-    width: 25vw;
+    width: 420px;
     margin: 0 auto;
     height: auto;
     background-color: #fff;
@@ -166,8 +187,8 @@ button {
 }
 .line-red{
     border: #c82333 solid 3px;
-    width: 20w;
-    min-width: 220px;
+    width: 360px;
+    
     margin: 0 auto;
     justify-content: center;
     background-color: #f8f8f8;
@@ -175,8 +196,8 @@ button {
 }
 .wrap-red-line{
     border: #c82333 double 5px;
-    width: 20vw;
-    min-width: 200px;
+    
+    min-width: 380px;
     height: auto;
     margin: 0 auto;
     padding-bottom:100px ;
@@ -196,7 +217,7 @@ button {
     left:40%;
     right: 40%;
     margin: 20px auto 100px;
-    font-size: 1.3rem;
+    font-size: 1rem;
    border:solid 1px #fff; 
 }
 
@@ -206,6 +227,7 @@ button {
     font-weight: bold;
     border: #dc3545 solid 1px;
 }
+
 /* developer.html style */
 #backbtn{
     background-color: #dc3545;

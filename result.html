@@ -19,22 +19,21 @@
 <div class="bg-white">
   <div class="wrap-red-line">
     <hr class="line-red" />
-    <div class="illust-frame"><img class="illust" src="${omikujiData["url"]}" /></div>
-    
+    <img class="illust" src="${omikujiData["url"]}" />
     <hr class="line-red" />
     <h1 class="text-danger yuji-syuku text-center p-3 detail-font">
       ${omikujiData["結果"]}
     </h1>
-    <hr class="line-red" />
-  <div class="explanation">
+  
+  <div>
   <p class="text-danger yuji-syuku p-3 detail-font">
   ${omikujiData["詳細"]}
   </p>
   </div>
-  <div class="mb-3">
+  <div class="mb-3 text-center">
     <hr class="line-red" />
-    <p class="text-danger yuji-syuku text-center skill-font">✿ スキル ✿</p>
-    <p class="text-danger yuji-syuku text-center skill-font">${omikujiData["スキル"]}</p>
+    <p class="text-danger skill-font">✿ スキル ✿</p>
+    <p class="text-danger skill-font">${omikujiData["スキル"]}</p>
     <hr class="line-red" />
     <p class="text-danger yuji-syuku text-center item-font">
       ✿ ラッキーアイテム ✿
@@ -50,7 +49,7 @@
       type="button"
       class="btn btn-danger rounded-pill yuji-syuku"
     >
-      もう一度おみくじを引く
+      <p>Retry</p>
     </button>
   </div>
   </main>
