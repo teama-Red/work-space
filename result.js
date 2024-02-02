@@ -111,8 +111,7 @@ function createResult(randomResult){
     `;
 
     // 「もう一度おみくじを引く」ボタンをクリックした際に反応する関数を設定
-    resultHtml.querySelectorAll('#re-draw-omikuji');
-    resultHtml.addEventListener('click', function(){
+    resultHtml.querySelectorAll('#re-draw-omikuji')[0].addEventListener('click', function(){
         retry();
     });
 
