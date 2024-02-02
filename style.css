@@ -8,12 +8,15 @@
 /* Basic font settings */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #c0c0c0; /* Light background color */
+     /* Light background color */
     color: #333;
     height: auto; 
     width: 100%;
     position: relative;
+    background-image: url("img/sakura-bg.png");
+
 }
+
 /* Centering and spacing for the main container */
 #home {
     /* display: block; */
@@ -45,7 +48,7 @@ h1 {
 .Omikuji-img{
  display: block;
  margin: 100px auto;
- width:6em;
+ width:14rem;
 
 }
 .vh-100 {
@@ -130,16 +133,42 @@ button {
 .detail-font,.skill-font,.item-font{
     font-size: 20px;
 }
+.illust-frame{
+    width: 22vw;
+    height: auto;
+    position: relative;
+    display: block;
+    padding-top:100px;
+}
+.illust{
+    width:300px;
+    padding: 3.5rem;
+    margin: 100px auto;
+    position: absolute;
+    right: 40%;
+    left: 40%;
+}
+.detail-font{
+    margin-top: 300px;
+    padding-top: 100px;
+}
+/* 説明文詳細 */
+.explanation{
+    padding-top: 100px;
+    display: inline-block;
+}
 .bg-white{
     width: 22vw;
     margin: 0 auto;
     height: auto;
     background-color: #fff;
     padding: 20px;
+    min-width: 220px;
 }
 .line-red{
     border: #c82333 solid 3px;
-    width: 17vw;
+    width: 16w;
+    min-width: 170px;
     margin: 0 auto;
     justify-content: center;
     background-color: #f8f8f8;
@@ -147,7 +176,8 @@ button {
 }
 .wrap-red-line{
     border: #c82333 double 5px;
-    width: 18vw;
+    width: 15vw;
+    min-width: 180px;
     height: auto;
     margin: 0 auto;
     padding-bottom:100px ;
