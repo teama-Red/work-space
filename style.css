@@ -178,7 +178,6 @@ button {
 }
 .wrap-red-line{
     border: #c82333 double 5px;
-    
     min-width: 380px;
     height: auto;
     margin: 0 auto;
@@ -202,8 +201,9 @@ button {
 }
 
 #re-draw-omikuji:hover{
-    background-color: white;;
-    color:  #0a0102; 
+    display:block;
+    background-color:white;
+    color:   #dc3545; 
     font-weight: bold;
     border: #dc3545 solid 1px;
     display:block;
